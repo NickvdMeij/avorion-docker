@@ -3,7 +3,7 @@
 (
 	cd /opt/steamcmd
 
-	if [ -d ${USE_BETA} ] && [ ${USE_BETA} ]
+	if [ ${USE_BETA} ]
 	then
 	./steamcmd.sh +login anonymous \
 				+force_install_dir ${SERVER_DIRECTORY} \
