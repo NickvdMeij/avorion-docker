@@ -2,10 +2,19 @@
 
 (
 	cd /opt/steamcmd
+
+	if [ -d ${USE_BETA} ] && [ ${USE_BETA} ]
+	then
 	./steamcmd.sh +login anonymous \
 				+force_install_dir ${SERVER_DIRECTORY} \
 				+app_update "565060 validate -beta beta" \
 				+quit
+	else
+		./steamcmd.sh +login anonymous \
+				+force_install_dir ${SERVER_DIRECTORY} \
+				+app_update 565060 validate \
+				+quit
+	fi
 )
 
 (

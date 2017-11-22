@@ -5,6 +5,7 @@ MAINTAINER PsyKzz <matt.daemon660@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 ENV SERVER_DIRECTORY=/opt/server
 ENV OVERWRITE_DIRECTORY=/opt/server-overwrite
+ENV USE_BETA=false
 
 # Install dependencies
 RUN apt-get update &&\
