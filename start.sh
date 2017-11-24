@@ -21,7 +21,7 @@
 	cd /opt
 	cp server/linux64/steamclient.so server/bin/steamclient.so
 	cp server/linux64/steamclient.so server/steamclient.so
-	cp server/linux64/steamclient.so ./bin/steamclient.so
+	cp server/linux64/steamclient.so ./steamclient.so
 )
 
 (
