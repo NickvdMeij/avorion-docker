@@ -5,9 +5,9 @@
 
 	if [ ${USE_BETA} ]
 	then
-	./steamcmd.sh +login anonymous \
+		./steamcmd.sh +login anonymous \
 				+force_install_dir ${SERVER_DIRECTORY} \
-				+app_update "565060 validate -beta beta" \
+				+app_update "565060 -beta beta validate" \
 				+quit
 	else
 		./steamcmd.sh +login anonymous \
@@ -15,6 +15,13 @@
 				+app_update 565060 validate \
 				+quit
 	fi
+)
+
+(
+	cd /opt
+	cp server/linux64/steamclient.so server/bin/steamclient.so
+	cp server/linux64/steamclient.so server/steamclient.so
+	cp server/linux64/steamclient.so ./bin/steamclient.so
 )
 
 (

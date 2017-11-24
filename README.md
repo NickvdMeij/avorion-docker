@@ -12,7 +12,7 @@ For some information about the game see https://www.kickstarter.com/projects/koo
 
 This is a docker image to create a dedicated server.
 
-**Currently supported version: 0.10.2**
+**Currently supported version: public (0.14.5) and beta (0.15.0)**
 
 
 ## Getting started
@@ -22,6 +22,7 @@ Starting the server
 * Add your settings.ini and fill out the values as you like.
 
 > **Note: if you change ports in the config, you'll need to adjust the port mappings.**
+> **Note: if you enable RCON by setting a password, you need to open port 27015 (`-p 27015 -p 27015/udp`)**
 
 Run the following to start the server.
 ```
@@ -32,9 +33,13 @@ The server data will be saved locally on the host machine within the data folder
 
 You can specify an admin via the environment, adding `-e USER=<steamid>` to set the default admin on server start.
 
+By setting the environment variable `USE_BETA` to true using the `-e USE_BETA=true` flag, the server will use the beta branch for its server runtime files. this environment variable defaults to `false`, meaning it will install the release build by default.
+
+> **Keep in mind that if you upgrade your server, the galaxy will still be "generated" in the previous patch and will not have the new features available in the `beta` branch.**
 
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md)
 
-
+/var/gameservers/alfaswek/avorion:/root/.avorion/galaxies/avorion_galaxy
+/var/gameservers/alfaswek/avorion-settings/start.sh:/opt/start.sh
