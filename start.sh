@@ -7,7 +7,7 @@
 	then
 		./steamcmd.sh +login anonymous \
 				+force_install_dir ${SERVER_DIRECTORY} \
-				+app_update "565060 -beta beta validate" \
+				+app_update 565060 -beta beta validate \
 				+quit
 	else
 		./steamcmd.sh +login anonymous \

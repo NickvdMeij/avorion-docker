@@ -40,6 +40,3 @@ By setting the environment variable `USE_BETA` to true using the `-e USE_BETA=tr
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md)
-
-/var/gameservers/alfaswek/avorion:/root/.avorion/galaxies/avorion_galaxy
-/var/gameservers/alfaswek/avorion-settings/start.sh:/opt/start.sh
